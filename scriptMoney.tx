@@ -1,0 +1,56 @@
+Program:
+  statements*=Statement
+;
+
+Statement:
+  SavingsStatement | InvestmentStatement | DepositStatement | WithdrawalStatement | ShowStatement | FizzBuzzStatement
+;
+
+SavingsStatement:
+  'Savings'',' account_type=SavingsType ',' year=Expression ',' (rate=Percentage ',')?  amount=Expression
+;
+
+InvestmentStatement:
+  'Invest' ',' account_type=InvestType ',' year=Expression ',' rate=Percentage ',' amount=Expression
+;
+
+DepositStatement:
+  'Deposit' ',' amount=Expression
+;
+
+WithdrawalStatement:
+  'Withdrawal' ',' amount=Expression
+;
+
+
+FizzBuzzStatement:
+  'FizzBuzz'',' num1=INT ',' num2=INT ',' fizz_str=STRING ',' buzz_str=STRING 
+;
+
+ShowStatement:
+  'show' show_str=STRING
+;
+
+SavingsType:
+  'Traditional' | 'High Yield' | 'CD'
+;
+
+InvestType:
+  'Bonds' | 'CD' | 'Roth IRA'
+;
+
+Expression:
+  Sum
+;
+
+Sum:
+  FLOAT | INT
+;
+
+Percentage:
+  Expression
+;
+
+Comment:
+  /\/\/.*$/
+;
