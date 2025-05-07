@@ -9,7 +9,7 @@ init(autoreset=True)
 from textx import metamodel_from_file
 
 scriptMoney_mm = metamodel_from_file('scriptMoney.tx')
-scriptMoney_model = scriptMoney_mm.model_from_file('program1.sm')
+scriptMoney_model = scriptMoney_mm.model_from_file('program3.sm')
 
 class scriptMoney:
     def __init__(self):
@@ -168,7 +168,7 @@ class scriptMoney:
                             print(Fore.GREEN +str(cd_total + self.amount))
                         case "Roth IRA":
                             print(Style.BRIGHT + f"Roth IRA is an individual retirement account, where you can contribute with after-tax dollars")
-                            roth_ira_pro_con = self.pro_con_dict.get("CD")
+                            roth_ira_pro_con = self.pro_con_dict.get("Roth IRA")
                             print("Pros: ")
                             for pro in roth_ira_pro_con.get("Pros", []):
                                 print(f"• {pro}")
