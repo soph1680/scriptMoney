@@ -69,7 +69,7 @@ class scriptMoney:
                 #cases for each type of account the user decides to put
                 match statement.account_type:
                     case "Traditional":
-                        print(Style.BRIGHT + f"Traditional bank avings are offered by banks and you're allowed to store money securely")
+                        print(Style.BRIGHT + f"Traditional bank savings are offered by banks and you're allowed to store money securely")
                         trad_pro_con = self.pro_con_dict.get("Traditional Savings")
                         print("Pros: ")
                         for pro in trad_pro_con.get("Pros", []):
@@ -144,9 +144,9 @@ class scriptMoney:
                             print(f"The percentage rate you have entered: " + str(self.rate))
                             print(f"The amount of money you have inputed: " + str(self.amount))
                             bondTotal = self.amount * (0.006) * self.year
-                            print(f"The amount you have saved with Bonds:")
+                            print(f"The amount you have invest with Bonds:")
                             print(Fore.GREEN +str(bondTotal))
-                            print(f"The amount you have saved in total with Bonds:")
+                            print(f"The amount you have invest in total with Bonds:")
                             print(Fore.GREEN +str(bondTotal + self.amount))
                         case "CD":
                             print(Style.BRIGHT + f"CD or certificate of deposit is a low-risk savings/interest product offered by banks and credit unions")
