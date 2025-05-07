@@ -1,0 +1,5 @@
+Deposit, 1000
+Withdrawal, 1000
+Deposit, 50
+Deposit, 100
+show "balance"
